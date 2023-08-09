@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags requeridos -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Iniciar sesión</title>
+  </head>
+  <body class="text-center">
+    <div class="container d-flex vh-100 align-items-center">
+        <div class="row w-100 justify-content-center">
+            <form class="form-signin" method="POST">
+              <img src="{{ url_for('static', filename='icon/img_login.png') }}" alt="Logo" class="mb-3 login-logo">
+              <h1 class="h3 mb-3 font-weight-normal">Por favor inicia sesión</h1>
+              
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <img src="{{ url_for('static', filename='icon/user-icon.png') }}" alt="user-icon" style="max-width: 15px;">
+                  </span>
+                </div>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Nombre de usuario" required autofocus>
+              </div>
+              
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <img src="{{ url_for('static', filename='icon/password-icon.png') }}" alt="password-icon" style="max-width: 15px;">
+                  </span>
+                </div>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+              </div>
+              
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
+              <a href="/forgot_password" class="mt-3 d-block">¿Olvidaste tu contraseña?</a>
+              
+              
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
